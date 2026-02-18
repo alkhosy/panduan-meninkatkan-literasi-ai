@@ -2,10 +2,17 @@
 
 Repo ini menyimpan sumber naskah LaTeX untuk ebook/panduan literasi AI.
 
-## Kenapa `main.pdf` tidak disimpan di Git?
-GitHub PR sering memberi peringatan untuk file biner (seperti PDF) karena tidak bisa ditinjau inline seperti teks. Agar review PR tetap rapi, repo ini hanya menyimpan sumber teks (`main.tex`).
+## Kenapa `main.pdf` tidak kena warning biner di PR?
+`main.pdf` disimpan menggunakan **Git LFS** agar PR tetap ringan dan tidak memunculkan warning diff biner biasa.
 
 ## Cara kompilasi PDF
+
+Sebelum pull, pastikan Git LFS aktif:
+
+```bash
+git lfs install
+```
+
 Jalankan perintah berikut di root repo:
 
 ```bash
@@ -18,4 +25,4 @@ Output akan terbentuk sebagai:
 - `main.pdf`
 
 ## File sementara yang diabaikan
-Artefak build LaTeX (seperti `.aux`, `.log`, `.out`, `.toc`) serta `main.pdf` diabaikan oleh `.gitignore`.
+Artefak build LaTeX sementara (seperti `.aux`, `.log`, `.out`, `.toc`) diabaikan oleh `.gitignore`. File `main.pdf` tetap disimpan, tetapi melalui Git LFS.
