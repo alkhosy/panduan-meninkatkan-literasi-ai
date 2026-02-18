@@ -1,0 +1,381 @@
+\documentclass[12pt,oneside]{book}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[indonesian]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\titleformat{\chapter}[display]{\bfseries\Huge}{Bab \thechapter}{0.5em}{}
+\title{Panduan Praktikal Meningkatkan Literasi AI\\ \large Untuk Pemula dengan Metode Self-Bootstrapping}
+\author{Disusun untuk pembelajar pemula}
+\date{\today}
+
+\newcommand{\mission}[8]{%
+\section*{Misi Praktik #1: #2}
+\textbf{Level:} #3\\
+\textbf{Durasi:} #4\\
+\textbf{Tool Utama:} #5\\
+\textbf{Domain:} #6
+
+\textbf{Skenario}\\
+#7
+
+\textbf{Langkah Praktik}
+\begin{enumerate}[leftmargin=*,itemsep=0.25em]
+\item Tetapkan tujuan mikro yang bisa selesai dalam satu sesi.
+\item Tulis prompt awal dengan format: konteks, tugas, batasan, output yang diinginkan.
+\item Jalankan dua versi prompt: versi singkat dan versi terstruktur.
+\item Bandingkan hasil menggunakan rubrik: akurasi, kejelasan, ketepatan format, dan risiko halusinasi.
+\item Lakukan iterasi berbasis umpan balik: revisi prompt, tambah contoh, dan verifikasi fakta.
+\item Dokumentasikan temuan pada \textit{AI Learning Log}.
+\end{enumerate}
+
+\textbf{Checklist Validasi}
+\begin{itemize}[leftmargin=*,itemsep=0.2em]
+\item[$\square$] Output menjawab tujuan utama.
+\item[$\square$] Ada pemeriksaan fakta dari sumber eksternal atau data internal.
+\item[$\square$] Ada catatan risiko dan batas penggunaan AI.
+\item[$\square$] Ada versi final prompt yang siap dipakai ulang.
+\end{itemize}
+
+\textbf{Refleksi Terstruktur}\\
+#8
+\clearpage
+}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+\chapter*{Cara Menggunakan Buku Ini}
+Buku ini berfokus pada praktik. Anda akan belajar literasi AI lewat eksperimen kecil yang berulang, terukur, dan terdokumentasi. Metode yang dipakai adalah \textbf{self-bootstrapping}: kemampuan meningkatkan kualitas belajar AI secara mandiri dari siklus \textit{rancang \textrightarrow{} uji \textrightarrow{} nilai \textrightarrow{} revisi}. Setiap misi praktik berdiri sendiri, sehingga Anda bisa mulai dari mana pun.
+
+\mainmatter
+\chapter{Fondasi Literasi AI untuk Pemula}
+Literasi AI bukan sekadar bisa memakai chatbot. Literasi AI berarti mampu memahami \textit{apa yang bisa dilakukan AI}, \textit{apa yang tidak bisa dilakukan AI}, dan \textit{kapan manusia harus mengambil keputusan akhir}. Pemula sering salah karena menganggap AI selalu benar. Pada kenyataannya, model bahasa besar memprediksi token, bukan menjamin kebenaran.
+
+Komponen literasi AI yang wajib dikuasai:
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Pemahaman konsep}: model, data latih, inferensi, bias, dan batas konteks.
+\item \textbf{Keterampilan operasional}: menulis prompt, mengevaluasi output, mengelola iterasi.
+\item \textbf{Kritik epistemik}: memeriksa sumber, membedakan fakta, opini, dan asumsi.
+\item \textbf{Etika dan keamanan}: privasi data, hak cipta, fairness, dan dampak sosial.
+\item \textbf{Produktivitas nyata}: menerapkan AI pada studi, kerja, dan proyek personal.
+\end{enumerate}
+
+\section*{Model Mental yang Tepat}
+Gunakan model mental \textbf{AI sebagai asisten junior yang cepat}. Ia berguna untuk draf awal, ringkasan, brainstorming, dan otomasi tugas rutin. Namun, keputusan penting tetap perlu pengawasan manusia. Dengan model mental ini, Anda akan lebih jarang kecewa dan lebih sering mendapatkan nilai praktis.
+
+\section*{Peta Kompetensi 90 Hari}
+\begin{longtable}{p{0.2\textwidth}p{0.75\textwidth}}
+Minggu 1--2 & Mengenal antarmuka AI, prompt dasar, dan cara meminta format output.\\
+Minggu 3--4 & Verifikasi fakta, deteksi halusinasi, dan evaluasi kualitas jawaban.\\
+Minggu 5--6 & Prompt lanjutan: peran, contoh, batasan, dan rubrik evaluasi.\\
+Minggu 7--8 & Integrasi ke alur kerja: belajar, menulis, riset mini, dan presentasi.\\
+Minggu 9--10 & Privasi, etika, dan tata kelola penggunaan AI pribadi/tim.\\
+Minggu 11--12 & Proyek akhir: membangun sistem belajar AI mandiri berbasis logbook.\\
+\end{longtable}
+\clearpage
+
+\chapter{Metode Self-Bootstrapping: Belajar yang Semakin Cepat}
+Self-bootstrapping adalah teknik meningkatkan performa belajar melalui umpan balik yang Anda ciptakan sendiri. Prinsip intinya:
+\begin{itemize}[leftmargin=*]
+\item Mulai dari tugas kecil tapi sering.
+\item Simpan semua prompt yang efektif dan yang gagal.
+\item Gunakan rubrik numerik agar evaluasi konsisten.
+\item Pakai hasil evaluasi untuk memperbaiki prompt berikutnya.
+\item Bangun pustaka pribadi: template prompt, checklist verifikasi, dan SOP penggunaan AI.
+\end{itemize}
+
+\section*{Siklus 5 Langkah Self-Bootstrapping}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Define}: tetapkan target hasil yang spesifik.
+\item \textbf{Draft}: buat prompt versi 1.
+\item \textbf{Diagnose}: nilai output dengan rubrik.
+\item \textbf{Debug}: perbaiki prompt atau data konteks.
+\item \textbf{Deploy}: simpan versi final ke pustaka pribadi.
+\end{enumerate}
+
+\section*{AI Learning Log (Template)}
+Untuk setiap sesi praktik, catat:
+\begin{itemize}[leftmargin=*]
+\item Tujuan sesi.
+\item Prompt awal dan versi revisi.
+\item Output terbaik dan terburuk.
+\item Skor rubrik (1--5) pada akurasi, relevansi, struktur, dan keamanan.
+\item Pelajaran yang bisa dipakai ulang.
+\end{itemize}
+\clearpage
+
+\chapter{Toolkit Praktikal Literasi AI}
+Agar latihan efektif, siapkan toolkit berikut:
+\begin{enumerate}[leftmargin=*]
+\item Satu aplikasi AI percakapan utama.
+\item Satu editor teks (untuk menyimpan prompt).
+\item Spreadsheet/logbook untuk evaluasi.
+\item Sumber verifikasi: ensiklopedia, jurnal, dokumentasi resmi, atau laporan tepercaya.
+\item Timer 25 menit untuk latihan fokus (metode pomodoro).
+\end{enumerate}
+
+\section*{Rubrik Penilaian Output AI}
+\begin{longtable}{p{0.22\textwidth}p{0.15\textwidth}p{0.55\textwidth}}
+Kriteria & Skor & Definisi\\
+Akurasi & 1--5 & Ketepatan fakta dan konsistensi isi.\\
+Relevansi & 1--5 & Kesesuaian jawaban dengan tujuan tugas.\\
+Struktur & 1--5 & Kerapian format, urutan logis, dan keterbacaan.\\
+Keamanan & 1--5 & Bebas dari konten berisiko dan pelanggaran privasi.\\
+Keterpakai-an & 1--5 & Seberapa mudah output langsung dipakai.\\
+\end{longtable}
+\clearpage
+
+\chapter{200+ Misi Praktik Literasi AI}
+Misi di bab ini dirancang untuk pemula dan berorientasi hasil. Kerjakan secara bertahap dari level dasar ke menengah.
+\mission{1}{Merumuskan Pertanyaan yang Tepat}{Dasar}{35 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{2}{Membuat Ringkasan Terstruktur}{Dasar+}{40 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{3}{Mengecek Fakta Cepat}{Menengah awal}{45 menit}{AI penulisan}{Riset sederhana}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{4}{Menyusun Daftar Istilah}{Dasar}{50 menit}{AI presentasi}{Pendidikan}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{5}{Merancang Jadwal Belajar}{Dasar+}{55 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{6}{Membuat Rencana Mingguan}{Menengah awal}{60 menit}{AI coding assistant}{Konten kreatif}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{7}{Membangun FAQ}{Dasar}{30 menit}{Chatbot umum}{Belajar pribadi}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{8}{Menyusun Kerangka Artikel}{Dasar+}{35 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{9}{Menyederhanakan Bahasa Teknis}{Menengah awal}{40 menit}{AI penulisan}{Riset sederhana}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{10}{Membuat Catatan Rapat}{Dasar}{45 menit}{AI presentasi}{Pendidikan}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{11}{Menyusun To-Do Prioritas}{Dasar+}{50 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{12}{Mengubah Ide Menjadi Langkah Aksi}{Menengah awal}{55 menit}{AI coding assistant}{Konten kreatif}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{13}{Membuat Prompt Berbasis Peran}{Dasar}{60 menit}{Chatbot umum}{Belajar pribadi}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{14}{Membandingkan Dua Pendekatan}{Dasar+}{30 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{15}{Menguji Batasan Model}{Menengah awal}{35 menit}{AI penulisan}{Riset sederhana}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{16}{Menganalisis Risiko Kesalahan}{Dasar}{40 menit}{AI presentasi}{Pendidikan}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{17}{Menyusun Rubrik Evaluasi}{Dasar+}{45 menit}{AI spreadsheet}{Bisnis UMKM}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{18}{Membuat Draft Email Profesional}{Menengah awal}{50 menit}{AI coding assistant}{Konten kreatif}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{19}{Menyusun Proposal Mini}{Dasar}{55 menit}{Chatbot umum}{Belajar pribadi}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{20}{Membuat Script Presentasi}{Dasar+}{60 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{21}{Merumuskan Pertanyaan yang Tepat}{Menengah awal}{30 menit}{AI penulisan}{Riset sederhana}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{22}{Membuat Ringkasan Terstruktur}{Dasar}{35 menit}{AI presentasi}{Pendidikan}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{23}{Mengecek Fakta Cepat}{Dasar+}{40 menit}{AI spreadsheet}{Bisnis UMKM}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{24}{Menyusun Daftar Istilah}{Menengah awal}{45 menit}{AI coding assistant}{Konten kreatif}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{25}{Merancang Jadwal Belajar}{Dasar}{50 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{26}{Membuat Rencana Mingguan}{Dasar+}{55 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{27}{Membangun FAQ}{Menengah awal}{60 menit}{AI penulisan}{Riset sederhana}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{28}{Menyusun Kerangka Artikel}{Dasar}{30 menit}{AI presentasi}{Pendidikan}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{29}{Menyederhanakan Bahasa Teknis}{Dasar+}{35 menit}{AI spreadsheet}{Bisnis UMKM}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{30}{Membuat Catatan Rapat}{Menengah awal}{40 menit}{AI coding assistant}{Konten kreatif}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{31}{Menyusun To-Do Prioritas}{Dasar}{45 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{32}{Mengubah Ide Menjadi Langkah Aksi}{Dasar+}{50 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{33}{Membuat Prompt Berbasis Peran}{Menengah awal}{55 menit}{AI penulisan}{Riset sederhana}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{34}{Membandingkan Dua Pendekatan}{Dasar}{60 menit}{AI presentasi}{Pendidikan}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{35}{Menguji Batasan Model}{Dasar+}{30 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{36}{Menganalisis Risiko Kesalahan}{Menengah awal}{35 menit}{AI coding assistant}{Konten kreatif}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{37}{Menyusun Rubrik Evaluasi}{Dasar}{40 menit}{Chatbot umum}{Belajar pribadi}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{38}{Membuat Draft Email Profesional}{Dasar+}{45 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{39}{Menyusun Proposal Mini}{Menengah awal}{50 menit}{AI penulisan}{Riset sederhana}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{40}{Membuat Script Presentasi}{Dasar}{55 menit}{AI presentasi}{Pendidikan}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{41}{Merumuskan Pertanyaan yang Tepat}{Dasar+}{60 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{42}{Membuat Ringkasan Terstruktur}{Menengah awal}{30 menit}{AI coding assistant}{Konten kreatif}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{43}{Mengecek Fakta Cepat}{Dasar}{35 menit}{Chatbot umum}{Belajar pribadi}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{44}{Menyusun Daftar Istilah}{Dasar+}{40 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{45}{Merancang Jadwal Belajar}{Menengah awal}{45 menit}{AI penulisan}{Riset sederhana}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{46}{Membuat Rencana Mingguan}{Dasar}{50 menit}{AI presentasi}{Pendidikan}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{47}{Membangun FAQ}{Dasar+}{55 menit}{AI spreadsheet}{Bisnis UMKM}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{48}{Menyusun Kerangka Artikel}{Menengah awal}{60 menit}{AI coding assistant}{Konten kreatif}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{49}{Menyederhanakan Bahasa Teknis}{Dasar}{30 menit}{Chatbot umum}{Belajar pribadi}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{50}{Membuat Catatan Rapat}{Dasar+}{35 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{51}{Menyusun To-Do Prioritas}{Menengah awal}{40 menit}{AI penulisan}{Riset sederhana}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{52}{Mengubah Ide Menjadi Langkah Aksi}{Dasar}{45 menit}{AI presentasi}{Pendidikan}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{53}{Membuat Prompt Berbasis Peran}{Dasar+}{50 menit}{AI spreadsheet}{Bisnis UMKM}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{54}{Membandingkan Dua Pendekatan}{Menengah awal}{55 menit}{AI coding assistant}{Konten kreatif}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{55}{Menguji Batasan Model}{Dasar}{60 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{56}{Menganalisis Risiko Kesalahan}{Dasar+}{30 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{57}{Menyusun Rubrik Evaluasi}{Menengah awal}{35 menit}{AI penulisan}{Riset sederhana}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{58}{Membuat Draft Email Profesional}{Dasar}{40 menit}{AI presentasi}{Pendidikan}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{59}{Menyusun Proposal Mini}{Dasar+}{45 menit}{AI spreadsheet}{Bisnis UMKM}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{60}{Membuat Script Presentasi}{Menengah awal}{50 menit}{AI coding assistant}{Konten kreatif}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{61}{Merumuskan Pertanyaan yang Tepat}{Dasar}{55 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{62}{Membuat Ringkasan Terstruktur}{Dasar+}{60 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{63}{Mengecek Fakta Cepat}{Menengah awal}{30 menit}{AI penulisan}{Riset sederhana}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{64}{Menyusun Daftar Istilah}{Dasar}{35 menit}{AI presentasi}{Pendidikan}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{65}{Merancang Jadwal Belajar}{Dasar+}{40 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{66}{Membuat Rencana Mingguan}{Menengah awal}{45 menit}{AI coding assistant}{Konten kreatif}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{67}{Membangun FAQ}{Dasar}{50 menit}{Chatbot umum}{Belajar pribadi}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{68}{Menyusun Kerangka Artikel}{Dasar+}{55 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{69}{Menyederhanakan Bahasa Teknis}{Menengah awal}{60 menit}{AI penulisan}{Riset sederhana}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{70}{Membuat Catatan Rapat}{Dasar}{30 menit}{AI presentasi}{Pendidikan}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{71}{Menyusun To-Do Prioritas}{Dasar+}{35 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{72}{Mengubah Ide Menjadi Langkah Aksi}{Menengah awal}{40 menit}{AI coding assistant}{Konten kreatif}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{73}{Membuat Prompt Berbasis Peran}{Dasar}{45 menit}{Chatbot umum}{Belajar pribadi}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{74}{Membandingkan Dua Pendekatan}{Dasar+}{50 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{75}{Menguji Batasan Model}{Menengah awal}{55 menit}{AI penulisan}{Riset sederhana}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{76}{Menganalisis Risiko Kesalahan}{Dasar}{60 menit}{AI presentasi}{Pendidikan}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{77}{Menyusun Rubrik Evaluasi}{Dasar+}{30 menit}{AI spreadsheet}{Bisnis UMKM}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{78}{Membuat Draft Email Profesional}{Menengah awal}{35 menit}{AI coding assistant}{Konten kreatif}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{79}{Menyusun Proposal Mini}{Dasar}{40 menit}{Chatbot umum}{Belajar pribadi}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{80}{Membuat Script Presentasi}{Dasar+}{45 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{81}{Merumuskan Pertanyaan yang Tepat}{Menengah awal}{50 menit}{AI penulisan}{Riset sederhana}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{82}{Membuat Ringkasan Terstruktur}{Dasar}{55 menit}{AI presentasi}{Pendidikan}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{83}{Mengecek Fakta Cepat}{Dasar+}{60 menit}{AI spreadsheet}{Bisnis UMKM}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{84}{Menyusun Daftar Istilah}{Menengah awal}{30 menit}{AI coding assistant}{Konten kreatif}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{85}{Merancang Jadwal Belajar}{Dasar}{35 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{86}{Membuat Rencana Mingguan}{Dasar+}{40 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{87}{Membangun FAQ}{Menengah awal}{45 menit}{AI penulisan}{Riset sederhana}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{88}{Menyusun Kerangka Artikel}{Dasar}{50 menit}{AI presentasi}{Pendidikan}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{89}{Menyederhanakan Bahasa Teknis}{Dasar+}{55 menit}{AI spreadsheet}{Bisnis UMKM}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{90}{Membuat Catatan Rapat}{Menengah awal}{60 menit}{AI coding assistant}{Konten kreatif}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{91}{Menyusun To-Do Prioritas}{Dasar}{30 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{92}{Mengubah Ide Menjadi Langkah Aksi}{Dasar+}{35 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{93}{Membuat Prompt Berbasis Peran}{Menengah awal}{40 menit}{AI penulisan}{Riset sederhana}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{94}{Membandingkan Dua Pendekatan}{Dasar}{45 menit}{AI presentasi}{Pendidikan}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{95}{Menguji Batasan Model}{Dasar+}{50 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{96}{Menganalisis Risiko Kesalahan}{Menengah awal}{55 menit}{AI coding assistant}{Konten kreatif}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{97}{Menyusun Rubrik Evaluasi}{Dasar}{60 menit}{Chatbot umum}{Belajar pribadi}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{98}{Membuat Draft Email Profesional}{Dasar+}{30 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{99}{Menyusun Proposal Mini}{Menengah awal}{35 menit}{AI penulisan}{Riset sederhana}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{100}{Membuat Script Presentasi}{Dasar}{40 menit}{AI presentasi}{Pendidikan}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{101}{Merumuskan Pertanyaan yang Tepat}{Dasar+}{45 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{102}{Membuat Ringkasan Terstruktur}{Menengah awal}{50 menit}{AI coding assistant}{Konten kreatif}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{103}{Mengecek Fakta Cepat}{Dasar}{55 menit}{Chatbot umum}{Belajar pribadi}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{104}{Menyusun Daftar Istilah}{Dasar+}{60 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{105}{Merancang Jadwal Belajar}{Menengah awal}{30 menit}{AI penulisan}{Riset sederhana}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{106}{Membuat Rencana Mingguan}{Dasar}{35 menit}{AI presentasi}{Pendidikan}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{107}{Membangun FAQ}{Dasar+}{40 menit}{AI spreadsheet}{Bisnis UMKM}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{108}{Menyusun Kerangka Artikel}{Menengah awal}{45 menit}{AI coding assistant}{Konten kreatif}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{109}{Menyederhanakan Bahasa Teknis}{Dasar}{50 menit}{Chatbot umum}{Belajar pribadi}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{110}{Membuat Catatan Rapat}{Dasar+}{55 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{111}{Menyusun To-Do Prioritas}{Menengah awal}{60 menit}{AI penulisan}{Riset sederhana}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{112}{Mengubah Ide Menjadi Langkah Aksi}{Dasar}{30 menit}{AI presentasi}{Pendidikan}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{113}{Membuat Prompt Berbasis Peran}{Dasar+}{35 menit}{AI spreadsheet}{Bisnis UMKM}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{114}{Membandingkan Dua Pendekatan}{Menengah awal}{40 menit}{AI coding assistant}{Konten kreatif}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{115}{Menguji Batasan Model}{Dasar}{45 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{116}{Menganalisis Risiko Kesalahan}{Dasar+}{50 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{117}{Menyusun Rubrik Evaluasi}{Menengah awal}{55 menit}{AI penulisan}{Riset sederhana}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{118}{Membuat Draft Email Profesional}{Dasar}{60 menit}{AI presentasi}{Pendidikan}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{119}{Menyusun Proposal Mini}{Dasar+}{30 menit}{AI spreadsheet}{Bisnis UMKM}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{120}{Membuat Script Presentasi}{Menengah awal}{35 menit}{AI coding assistant}{Konten kreatif}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{121}{Merumuskan Pertanyaan yang Tepat}{Dasar}{40 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{122}{Membuat Ringkasan Terstruktur}{Dasar+}{45 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{123}{Mengecek Fakta Cepat}{Menengah awal}{50 menit}{AI penulisan}{Riset sederhana}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{124}{Menyusun Daftar Istilah}{Dasar}{55 menit}{AI presentasi}{Pendidikan}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{125}{Merancang Jadwal Belajar}{Dasar+}{60 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{126}{Membuat Rencana Mingguan}{Menengah awal}{30 menit}{AI coding assistant}{Konten kreatif}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{127}{Membangun FAQ}{Dasar}{35 menit}{Chatbot umum}{Belajar pribadi}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{128}{Menyusun Kerangka Artikel}{Dasar+}{40 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{129}{Menyederhanakan Bahasa Teknis}{Menengah awal}{45 menit}{AI penulisan}{Riset sederhana}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{130}{Membuat Catatan Rapat}{Dasar}{50 menit}{AI presentasi}{Pendidikan}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{131}{Menyusun To-Do Prioritas}{Dasar+}{55 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{132}{Mengubah Ide Menjadi Langkah Aksi}{Menengah awal}{60 menit}{AI coding assistant}{Konten kreatif}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{133}{Membuat Prompt Berbasis Peran}{Dasar}{30 menit}{Chatbot umum}{Belajar pribadi}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{134}{Membandingkan Dua Pendekatan}{Dasar+}{35 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{135}{Menguji Batasan Model}{Menengah awal}{40 menit}{AI penulisan}{Riset sederhana}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{136}{Menganalisis Risiko Kesalahan}{Dasar}{45 menit}{AI presentasi}{Pendidikan}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{137}{Menyusun Rubrik Evaluasi}{Dasar+}{50 menit}{AI spreadsheet}{Bisnis UMKM}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{138}{Membuat Draft Email Profesional}{Menengah awal}{55 menit}{AI coding assistant}{Konten kreatif}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{139}{Menyusun Proposal Mini}{Dasar}{60 menit}{Chatbot umum}{Belajar pribadi}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{140}{Membuat Script Presentasi}{Dasar+}{30 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{141}{Merumuskan Pertanyaan yang Tepat}{Menengah awal}{35 menit}{AI penulisan}{Riset sederhana}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{142}{Membuat Ringkasan Terstruktur}{Dasar}{40 menit}{AI presentasi}{Pendidikan}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{143}{Mengecek Fakta Cepat}{Dasar+}{45 menit}{AI spreadsheet}{Bisnis UMKM}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{144}{Menyusun Daftar Istilah}{Menengah awal}{50 menit}{AI coding assistant}{Konten kreatif}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{145}{Merancang Jadwal Belajar}{Dasar}{55 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{146}{Membuat Rencana Mingguan}{Dasar+}{60 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{147}{Membangun FAQ}{Menengah awal}{30 menit}{AI penulisan}{Riset sederhana}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{148}{Menyusun Kerangka Artikel}{Dasar}{35 menit}{AI presentasi}{Pendidikan}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{149}{Menyederhanakan Bahasa Teknis}{Dasar+}{40 menit}{AI spreadsheet}{Bisnis UMKM}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{150}{Membuat Catatan Rapat}{Menengah awal}{45 menit}{AI coding assistant}{Konten kreatif}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{151}{Menyusun To-Do Prioritas}{Dasar}{50 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{152}{Mengubah Ide Menjadi Langkah Aksi}{Dasar+}{55 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{153}{Membuat Prompt Berbasis Peran}{Menengah awal}{60 menit}{AI penulisan}{Riset sederhana}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{154}{Membandingkan Dua Pendekatan}{Dasar}{30 menit}{AI presentasi}{Pendidikan}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{155}{Menguji Batasan Model}{Dasar+}{35 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{156}{Menganalisis Risiko Kesalahan}{Menengah awal}{40 menit}{AI coding assistant}{Konten kreatif}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{157}{Menyusun Rubrik Evaluasi}{Dasar}{45 menit}{Chatbot umum}{Belajar pribadi}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{158}{Membuat Draft Email Profesional}{Dasar+}{50 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{159}{Menyusun Proposal Mini}{Menengah awal}{55 menit}{AI penulisan}{Riset sederhana}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{160}{Membuat Script Presentasi}{Dasar}{60 menit}{AI presentasi}{Pendidikan}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{161}{Merumuskan Pertanyaan yang Tepat}{Dasar+}{30 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{162}{Membuat Ringkasan Terstruktur}{Menengah awal}{35 menit}{AI coding assistant}{Konten kreatif}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{163}{Mengecek Fakta Cepat}{Dasar}{40 menit}{Chatbot umum}{Belajar pribadi}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{164}{Menyusun Daftar Istilah}{Dasar+}{45 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{165}{Merancang Jadwal Belajar}{Menengah awal}{50 menit}{AI penulisan}{Riset sederhana}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{166}{Membuat Rencana Mingguan}{Dasar}{55 menit}{AI presentasi}{Pendidikan}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{167}{Membangun FAQ}{Dasar+}{60 menit}{AI spreadsheet}{Bisnis UMKM}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{168}{Menyusun Kerangka Artikel}{Menengah awal}{30 menit}{AI coding assistant}{Konten kreatif}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{169}{Menyederhanakan Bahasa Teknis}{Dasar}{35 menit}{Chatbot umum}{Belajar pribadi}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{170}{Membuat Catatan Rapat}{Dasar+}{40 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{171}{Menyusun To-Do Prioritas}{Menengah awal}{45 menit}{AI penulisan}{Riset sederhana}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{172}{Mengubah Ide Menjadi Langkah Aksi}{Dasar}{50 menit}{AI presentasi}{Pendidikan}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{173}{Membuat Prompt Berbasis Peran}{Dasar+}{55 menit}{AI spreadsheet}{Bisnis UMKM}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{174}{Membandingkan Dua Pendekatan}{Menengah awal}{60 menit}{AI coding assistant}{Konten kreatif}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{175}{Menguji Batasan Model}{Dasar}{30 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{176}{Menganalisis Risiko Kesalahan}{Dasar+}{35 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{177}{Menyusun Rubrik Evaluasi}{Menengah awal}{40 menit}{AI penulisan}{Riset sederhana}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{178}{Membuat Draft Email Profesional}{Dasar}{45 menit}{AI presentasi}{Pendidikan}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{179}{Menyusun Proposal Mini}{Dasar+}{50 menit}{AI spreadsheet}{Bisnis UMKM}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{180}{Membuat Script Presentasi}{Menengah awal}{55 menit}{AI coding assistant}{Konten kreatif}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{181}{Merumuskan Pertanyaan yang Tepat}{Dasar}{60 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{182}{Membuat Ringkasan Terstruktur}{Dasar+}{30 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{183}{Mengecek Fakta Cepat}{Menengah awal}{35 menit}{AI penulisan}{Riset sederhana}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{184}{Menyusun Daftar Istilah}{Dasar}{40 menit}{AI presentasi}{Pendidikan}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{185}{Merancang Jadwal Belajar}{Dasar+}{45 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{186}{Membuat Rencana Mingguan}{Menengah awal}{50 menit}{AI coding assistant}{Konten kreatif}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{187}{Membangun FAQ}{Dasar}{55 menit}{Chatbot umum}{Belajar pribadi}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{188}{Menyusun Kerangka Artikel}{Dasar+}{60 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{189}{Menyederhanakan Bahasa Teknis}{Menengah awal}{30 menit}{AI penulisan}{Riset sederhana}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{190}{Membuat Catatan Rapat}{Dasar}{35 menit}{AI presentasi}{Pendidikan}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{191}{Menyusun To-Do Prioritas}{Dasar+}{40 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{192}{Mengubah Ide Menjadi Langkah Aksi}{Menengah awal}{45 menit}{AI coding assistant}{Konten kreatif}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{193}{Membuat Prompt Berbasis Peran}{Dasar}{50 menit}{Chatbot umum}{Belajar pribadi}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{194}{Membandingkan Dua Pendekatan}{Dasar+}{55 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{195}{Menguji Batasan Model}{Menengah awal}{60 menit}{AI penulisan}{Riset sederhana}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{196}{Menganalisis Risiko Kesalahan}{Dasar}{30 menit}{AI presentasi}{Pendidikan}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{197}{Menyusun Rubrik Evaluasi}{Dasar+}{35 menit}{AI spreadsheet}{Bisnis UMKM}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{198}{Membuat Draft Email Profesional}{Menengah awal}{40 menit}{AI coding assistant}{Konten kreatif}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{199}{Menyusun Proposal Mini}{Dasar}{45 menit}{Chatbot umum}{Belajar pribadi}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{200}{Membuat Script Presentasi}{Dasar+}{50 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{201}{Merumuskan Pertanyaan yang Tepat}{Menengah awal}{55 menit}{AI penulisan}{Riset sederhana}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{202}{Membuat Ringkasan Terstruktur}{Dasar}{60 menit}{AI presentasi}{Pendidikan}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{203}{Mengecek Fakta Cepat}{Dasar+}{30 menit}{AI spreadsheet}{Bisnis UMKM}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{204}{Menyusun Daftar Istilah}{Menengah awal}{35 menit}{AI coding assistant}{Konten kreatif}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{205}{Merancang Jadwal Belajar}{Dasar}{40 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{206}{Membuat Rencana Mingguan}{Dasar+}{45 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{207}{Membangun FAQ}{Menengah awal}{50 menit}{AI penulisan}{Riset sederhana}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{208}{Menyusun Kerangka Artikel}{Dasar}{55 menit}{AI presentasi}{Pendidikan}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{209}{Menyederhanakan Bahasa Teknis}{Dasar+}{60 menit}{AI spreadsheet}{Bisnis UMKM}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{210}{Membuat Catatan Rapat}{Menengah awal}{30 menit}{AI coding assistant}{Konten kreatif}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{211}{Menyusun To-Do Prioritas}{Dasar}{35 menit}{Chatbot umum}{Belajar pribadi}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+\mission{212}{Mengubah Ide Menjadi Langkah Aksi}{Dasar+}{40 menit}{Mesin pencari AI}{Produktivitas kantor}{Anda sedang belajar topik baru dan butuh penjelasan bertingkat dari sangat sederhana ke tingkat menengah.}{Bagian mana yang masih rawan halusinasi? Catat sinyal awal ketika jawaban AI tidak dapat dipercaya.}
+\mission{213}{Membuat Prompt Berbasis Peran}{Menengah awal}{45 menit}{AI penulisan}{Riset sederhana}{Anda diminta menyusun materi singkat untuk tim kecil dan perlu output yang rapi, jelas, dan mudah ditindaklanjuti.}{Jika tugas yang sama dikerjakan besok, template prompt seperti apa yang akan Anda pakai ulang?}
+\mission{214}{Membandingkan Dua Pendekatan}{Dasar}{50 menit}{AI presentasi}{Pendidikan}{Anda harus mengambil keputusan berbasis informasi, sehingga jawaban AI wajib melewati pemeriksaan fakta dan kualitas.}{Apa keputusan manusia yang tidak boleh diserahkan ke AI dalam skenario ini? Jelaskan alasannya.}
+\mission{215}{Menguji Batasan Model}{Dasar+}{55 menit}{AI spreadsheet}{Bisnis UMKM}{Anda ingin membangun kebiasaan kerja modern dengan AI yang aman, etis, dan konsisten setiap hari.}{Bagaimana Anda mengukur keberhasilan sesi ini secara objektif dengan angka?}
+\mission{216}{Menganalisis Risiko Kesalahan}{Menengah awal}{60 menit}{AI coding assistant}{Konten kreatif}{Anda ingin menyelesaikan tugas lebih cepat tanpa mengorbankan kualitas. AI dipakai sebagai asisten untuk tahap draf dan verifikasi.}{Apa perubahan kualitas output setelah prompt direvisi? Tuliskan satu pola yang terbukti efektif hari ini.}
+
+\chapter{Proyek Akhir 14 Hari}
+Pada dua minggu terakhir, gabungkan semua teknik menjadi proyek akhir:
+\begin{enumerate}[leftmargin=*]
+\item Pilih satu tujuan nyata (misal: menulis ebook mini, membuat modul belajar, atau sistem FAQ internal).
+\item Buat baseline tanpa AI (30 menit), lalu bandingkan dengan workflow menggunakan AI.
+\item Ukur peningkatan pada kecepatan, kualitas, dan konsistensi.
+\item Buat SOP final: kapan pakai AI, bagaimana verifikasi, dan siapa penanggung jawab keputusan akhir.
+\end{enumerate}
+
+\section*{Indikator Keberhasilan}
+\begin{itemize}[leftmargin=*]
+\item Waktu pengerjaan turun minimal 20\% dengan kualitas tetap atau meningkat.
+\item Tingkat kesalahan faktual turun dari minggu ke minggu.
+\item Prompt library pribadi berisi minimal 30 template siap pakai.
+\item Anda mampu menjelaskan batas AI kepada orang lain secara sederhana.
+\end{itemize}
+\clearpage
+
+\backmatter
+\chapter*{Penutup}
+Literasi AI adalah kompetensi hidup baru. Semakin sering Anda berlatih secara sadar, semakin tinggi kualitas keputusan yang bisa Anda buat dengan bantuan AI. Gunakan buku ini sebagai workbook, bukan bacaan sekali jalan. Jalankan siklus self-bootstrapping setiap minggu, dan Anda akan melihat kemajuan yang terukur.
+
+\end{document}
